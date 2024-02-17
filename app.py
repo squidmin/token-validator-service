@@ -3,8 +3,9 @@ from flask_cors import CORS
 import requests
 
 app = Flask(__name__)
-CORS(app)  # This enables CORS for all domains on all routes. For production, you might want to restrict this.
-# CORS(app, resources={r"/api/*": {"origins": "http://example.com"}})
+# CORS(app)  # This enables CORS for all domains on all routes. For production, you might want to restrict this.
+CORS(app, resources={r"/api/*": {"origins": "https://james-resume-5afqr6ijoq-uc.a.run.app"}})
+
 
 
 @app.route('/api/validate-token', methods=['POST'])
